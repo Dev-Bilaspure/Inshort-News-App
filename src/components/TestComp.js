@@ -8,13 +8,7 @@ const TestComp = () => {
         languages: ['en', 'hi'],
         countries: ['in', 'us']
     }
-    const [state, setState] = useState({
-        query: '',
-        categories: [],
-        languages: [],
-        countries: []
-    })
-    const { changeParamObj } = useContext(NewsDataContext);
+    const { newsArticles, changeParamObj } = useContext(NewsDataContext);
     const handleSubmit = (e) => {
         e.preventDefault();
         changeParamObj(obj);
@@ -25,6 +19,14 @@ const TestComp = () => {
             <form onSubmit={handleSubmit}>
                 <input type="submit" value='submit'/>
             </form>
+            <hr />
+            {newsArticles.map(article => {
+                return(
+                    <div key={article.link}>
+                        <h3>{article.title}</h3>
+                    </div>
+                );
+            })}
         </div>
     )
 }

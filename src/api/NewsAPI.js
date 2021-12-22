@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const fetchNews = async(paramObj, updateNewsArticles) => {
+export const fetchNewsByParams = async(paramObj, updateNewsArticles) => {
     console.log('waiting');
     try {
         const news = await axios.post(
@@ -8,13 +8,11 @@ const fetchNews = async(paramObj, updateNewsArticles) => {
             paramObj
         )
         updateNewsArticles(news.data.results);
-        console.log(news.data);
+        
     } catch (error) {
         console.log(error);
     }
 }
-
-export default fetchNews;
 
 
 // let obj = {

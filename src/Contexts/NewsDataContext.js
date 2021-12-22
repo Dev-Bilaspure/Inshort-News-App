@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
-import fetchNews from '../api/NewsAPI';
+// import fetchNews from '../api/NewsAPI';
+import { fetchNewsByParams } from './../api/NewsAPI'
 
 export const NewsDataContext = createContext();
 
@@ -23,8 +24,12 @@ const NewsDataContextProvider = (props) => {
 	}
 
 	useEffect(() => {
-		fetchNews(paramObj, updateNewsArticles);
+		fetchNewsByParams(paramObj, updateNewsArticles);
+		console.log(newsArticles);
 	}, [paramObj]);
+	// useEffect(() => {
+
+	// }, [])
 
   	return (
 		<NewsDataContext.Provider value={{ newsArticles, changeParamObj }}>
