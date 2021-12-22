@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect, useState } from 'react'
+import axios from 'axios';
+import NewsDataContextProvider, { NewsDataContext } from './Contexts/NewsDataContext';
+import TestComp from './components/TestComp';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    // const { newsArticles, setParamObj } = useContext(NewsDataContext);
+    // let obj = {
+    //     query: 'Narendra Modi',
+    //     categories: ['politics', 'top'],
+    //     languages: ['en', 'hi'],
+    //     countries: ['in', 'us']
+    // }
+    // setParamObj(obj);
+    return (
+        <div>
+            <NewsDataContextProvider>
+                <h1>Hello Dev!!</h1>
+                <TestComp />
+            </NewsDataContextProvider>
+            
+        </div>
+    )
 }
 
-export default App;
+export default App
