@@ -1,16 +1,18 @@
 
 export const cats = [
+    'allNews',
+    'national',
     'business', 
-    'entertainment', 
-    'environment', 
-    'food', 
-    'health', 
-    'politics', 
-    'science', 
     'sports', 
+    'world', 
+    'politics', 
     'technology', 
-    'top', 
-    'world'
+    'startup', 
+    'entertainment', 
+    'miscellaneous', 
+    'hatke', 
+    'science', 
+    'automobile'
 ]
 
 export const langs = [

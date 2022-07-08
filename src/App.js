@@ -1,7 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios';
 import NewsDataContextProvider, { NewsDataContext } from './Contexts/NewsDataContext';
-import TestComp from './components/TestComp';
+import Header from './components/Header';
+import { Box, Slider } from '@material-ui/core';
+import InfoHeader from './components/InfoHeader';
+import { makeStyles } from '@material-ui/styles';
+import Articles from './components/Articles';
+
+const useStyles = makeStyles({
+    container: {
+        marginTop: 110,
+        width: '67.5%',
+        margin: '0 auto',
+    }
+})
 
 const App = () => {
     // const { newsArticles, setParamObj } = useContext(NewsDataContext);
@@ -12,11 +24,17 @@ const App = () => {
     //     countries: ['in', 'us']
     // }
     // setParamObj(obj);
+    
+    const classes = useStyles();
     return (
         <div>
             <NewsDataContextProvider>
-                <h1>Hello Dev!!</h1>
-                <TestComp />
+                
+                <Header />
+                <Box className={classes.container}>
+                    <InfoHeader />
+                </Box>
+                <Articles />
             </NewsDataContextProvider>
             
         </div>

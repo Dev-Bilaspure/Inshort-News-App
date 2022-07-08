@@ -11,7 +11,8 @@ const TestComp = () => {
     const { newsArticles, changeParamObj } = useContext(NewsDataContext);
     const handleSubmit = (e) => {
         e.preventDefault();
-        changeParamObj(obj);
+        console.log(newsArticles.length);
+        // changeParamObj(obj);
     }
     return (
         <div>
@@ -20,13 +21,15 @@ const TestComp = () => {
                 <input type="submit" value='submit'/>
             </form>
             <hr />
-            {newsArticles.map(article => {
-                return(
-                    <div key={article.link}>
-                        <h3>{article.title}</h3>
-                    </div>
-                );
-            })}
+            {
+                newsArticles ? newsArticles.map((article) => {
+                    if(article) {
+                        console.log(article);
+                        console.log('hello');
+                    }
+                        
+                }) : 'Loading'
+            }
         </div>
     )
 }
