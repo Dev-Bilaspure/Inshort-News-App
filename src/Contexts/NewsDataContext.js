@@ -5,7 +5,7 @@ export const NewsDataContext = createContext();
 const NewsDataContextProvider = (props) => {
 	const [newsObjectArray, setNewsObjectArray] = useState([]);
 	const [isFetching, setIsFetching] = useState(false);
-	const [isDrawerVisible, setIsDrawerVisible] = useState(false);
+	const [isDrawerVisible, setIsDrawerVisible] = useState(true);
 	const handleToggleSelectedLang = () => {
 		// selectedLang==='en' ? setSelectedLang('hi') : setSelectedLang('en');
 		const obj = {
