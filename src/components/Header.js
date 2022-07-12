@@ -38,7 +38,7 @@ const Header = () => {
                 <SlideBar />
                 <Menu className={classes.menu} onClick={handleToogleDrawerVisibility}/>
                 {/* <img src={url} alt="logo" className={classes.logo}/> */}
-                <Typography className={classes.logo} >Fast-Track-News</Typography>
+                <Typography className={classes.logo} >Inshort-Like</Typography>
             </Toolbar>
         </AppBar>
     )

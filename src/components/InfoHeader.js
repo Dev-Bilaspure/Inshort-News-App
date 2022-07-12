@@ -32,7 +32,7 @@ const InfoHeader = () => {
     return (
         <Paper elevation={4}>
             <Box className={classes.container}>
-                <Typography className={classes.text}><b>Stay Informed with Fast-Track-News.</b> Read latest news with Fast-Track in less than 60 words.</Typography>
+                <Typography className={classes.text}><b>Stay Informed with Inshort-Like-News.</b> Read latest news with Inshort-Like in less than 60 words.</Typography>
                 {/* <Box style={{marginLeft: 'auto'}}>
                 
                 <img src={'https://www.iconsdb.com/icons/preview/soylent-red/media-skip-forward-xxl.png'} alt="play-store-logo" className={classes.logo}/>
